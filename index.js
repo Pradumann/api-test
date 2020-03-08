@@ -40,6 +40,6 @@ app.get('/', verifyToken, (req, res) => {
 const HOST = process.env.HOST || '0.0.0.0'
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, HOST, () => {
+app.listen(PORT, () => {
   console.log('server running ' + PORT) // mongodb://heroku_0lhxg6th:5nnv3u2oo3drssi40o8emoqgho@ds359868.mlab.com:59868/heroku_0lhxg6th
 })
