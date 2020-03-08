@@ -37,5 +37,5 @@ app.get('/', verifyToken, (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log('server running ' + PORT)
+  console.log('server running ' + PORT) // mongodb://heroku_0lhxg6th:5nnv3u2oo3drssi40o8emoqgho@ds359868.mlab.com:59868/heroku_0lhxg6th
 })
