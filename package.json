@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "runLocal": "nodemon ./index.js",
-    "start": "node ./index.js"
+    "runLocal": "nodemon index.js",
+    "start": "node index.js"
   },
   "engines": {
     "node": "10.16.3"
