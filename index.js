@@ -4,8 +4,14 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 // const PORT = process.env.PORT || 3000 // Step 1
 const { mongoUrl } = require('./keys')
+const bcrypt = require('bcrypt')
+const saltRounds = 10
+module.exports.bcrypt = bcrypt
 
 require('dotenv').config({ path: 'variables.env' })
+
+const HOST = process.env.HOST || '0.0.0.0'
+const PORT = process.env.PORT || 3000
 // Mongo Set Up
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -36,9 +42,6 @@ app.post('/', (req, res) => {
 app.get('/', verifyToken, (req, res) => {
   res.send('Your email is ' + req.user.email)
 })
-
-const HOST = process.env.HOST || '0.0.0.0'
-const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
   console.log('server running ' + PORT) // mongodb://heroku_0lhxg6th:5nnv3u2oo3drssi40o8emoqgho@ds359868.mlab.com:59868/heroku_0lhxg6th
