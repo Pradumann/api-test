@@ -4,9 +4,9 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 // const PORT = process.env.PORT || 3000 // Step 1
 const { mongoUrl } = require('./keys')
-const bcrypt = require('bcrypt')
-const saltRounds = 10
-module.exports.bcrypt = bcrypt
+// const bcrypt = require('bcrypt')
+// const saltRounds = 10
+// module.exports.bcrypt = bcrypt
 
 require('dotenv').config({ path: 'variables.env' })
 
